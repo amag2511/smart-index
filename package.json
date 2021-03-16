@@ -4,14 +4,28 @@
 	"publisher": "amag2511",
 	"description": "Smart Index helps you to create configurable index file.",
 	"version": "1.0.0",
+	"icon": "assets/index.png",
 	"engines": {
 		"vscode": "^1.52.0"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/amag2511/smart-index"
+	},
+	"bugs": {
+		"url": "https://github.com/amag2511/smart-index/issues"
+	},
+	"keywords": [
+		"Flutter",
+		"Dart",
+		"Index",
+		"Context Menu"
+	],
 	"categories": [
-		"Other"
+		"Other",
+		"Programming Languages"
 	],
 	"activationEvents": [
-		"onCommand:smart-index.helloWorld",
 		"onCommand:extension.menu.index"
 	],
 	"main": "./out/extension.js",
