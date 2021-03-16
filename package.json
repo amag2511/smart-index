@@ -1,0 +1,66 @@
+{
+	"name": "smart-index",
+	"displayName": "Smart Index",
+	"publisher": "amag2511",
+	"description": "Smart Index helps you to create configurable index file.",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:smart-index.helloWorld",
+		"onCommand:extension.menu.index"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Smart Index",
+			"properties": {
+				"smart-index.extensionsToExclude": {
+					"type": "string",
+					"default": ".g.dart",
+					"description": "Specifies the files extensions to exclude from index file separated by comma (,)."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "extension.menu.index",
+				"title": "Create Index"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.menu.index",
+					"group": "0Smart index"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.52.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.15.0",
+		"@typescript-eslint/eslint-plugin": "^4.9.0",
+		"@typescript-eslint/parser": "^4.9.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-test": "^1.4.1"
+	}
+}
