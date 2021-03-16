@@ -1,6 +1,8 @@
 # smart-index for Visual Studio Code
 **Smart Index** helps you to create *configurable* index file.
+
 ![gif](https://github.com/amag2511/smart-index/blob/main/assets/smart_index.gif?raw=true)
+
 ## Features
 
 This extension serves for creating 'smart' `index.dart` file for the directory.
